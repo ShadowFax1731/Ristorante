@@ -1,0 +1,84 @@
+body{
+	padding:55px 0 0 0;/*Since navbar is hidden,will shift a bit downwards*/
+	z-index: 0;
+}
+.row- { 
+	margin:0px auto;
+	padding:0px auto;
+}
+.row-content { 
+	margin:0px auto;
+	padding: 50px 0 50px 0;
+	border-bottom: 1px ridge;
+	min-height: 400px;
+}
+footer
+{
+	background-color: #D1C4E9;
+	margin:0px auto;
+	padding:20px 0 20px 0;
+}
+.jumbotron{
+	padding: 70px 30px 70px 30px;
+	margin: 0px auto;
+	background: #9575CD;
+	color:floralwhite;
+}
+.address
+{
+	font-size: 80%;
+	margin:0px;
+	color:#0f0f0f;
+}
+.navbar{
+	background-color: #512DA8;
+}
+.btn-group{
+	margin-top:37px;
+	width: 200px;
+}
+#radio{
+	letter-spacing: 7px;
+}
+form{
+	font-size: 24px;
+}
+.nav-pills  .nav-link:not(.active) {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+.nav-pills  .nav-link {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: white;
+}
+.tab-content{
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding:10px;
+}
+.form-check-label{
+	font-size: 18px;
+}
+.carousel {
+    background:#512DA8;
+}
+
+.carousel-item {
+  height: 300px;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+.btn-group-toggle{
+	margin:0;
+	width:250px;
+}
+#carousalButton{
+	position: absolute;
+	right:0px;
+	bottom:0px;
+}

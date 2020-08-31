@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<!-- Linking the bootstrap file -->
+    <title>Home</title>
+</head>
+
+
+<body>
+
+    <!------------N  A   V  B A R-->
+	<nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+    <!-- bgprimary is primary bg clr, fixed-top fixes the bar at top for scrolling purpose-->
+    <!--Navbar allows to create a navigation bar in bootstrap, navbar-dark provide dark clr-->
+    <!--navbar-expand-sm says that navbar will collapse for toggle below sm size-->
+        <div class="container"><!-- contents will have restricted width as all other content-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+            <!--Class for the toggle bar, button type, and the data-toggle is js component-->
+            <!-- Data target has the address of the id, where the button will link when clicked -->
+                <span class="navbar-toggler-icon"></span><!-- For the three lines in the toggle --> 
+            </button>
+            <a class="navbar-brand " href="index.html"><img src="img/logo.png" height="30" width="41"></a>
+            <!-- Used for the name or logo, mr-auto is for right margin -->
+                <div class="collapse navbar-collapse" id="Navbar">
+                <!-- COLLAPSE plugin in BS makes the content collapse inside the toggler, when below sm -->
+                <!-- Here, in this div box the button will link to -->
+                    <ul class="navbar-nav mr-auto"><!-- classes for list and right margin -->
+                        <li class="nav-item active"><a class="nav-link" href="index.html">
+                        	<span class="fa fa-home"></span> Home</a></li>
+                        <!--That's how we use font awesome class-->
+                        <!-- Active, so that when we're in this page, it'll we highlighted -->
+                        <li class="nav-item "><a class="nav-link" href="aboutus.html">
+                        	<span class="fa fa-info"></span> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"> 
+                        	<span class="fa fa-list"></span>Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contactus.html">
+                        	<span class="fa fa-address-card"></span>Contact</a></li>
+                        <!--class allows items to be displayed horizontally-->
+                    </ul>
+                    <span class="navbar-text"><!--Gives the text to login button-->
+                        <a>
+                        <!--Using data-toggle and data-target we'll link the modal here-->
+                            <span class="fa fa-sign-in"></span>Login
+                        </a>
+                    </span>
+                </div>
+        </div>
+    </nav>
+<!---------------M O D A L------------->
+    <!--LOGIN-->
+    <div id="loginModal" class="modal fade" role="dialog"><!--Class modal, fade as it will fae in screen-->
+    <!--Role dialog means that it is displayed at the top of the page-->
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+            <!-- Every ,odal has all three of em, cause it's kinda seperate page -->
+                <div class="modal-header"><!--Modal-header will have one cross button-->
+                    <h4 class="modal-title">Login</h4>
+                    <button role="button" class="close" data-dismiss="modal">&times;</button><!--crosssign-->
+                    <!-- data-dismiss says when clicked, button will close the modal -->
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input form-control" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!--RESERVE MODAL-->
+    <div id="modalReserve" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table</h4>
+                    <button role="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label for="number" class="col-md-3 col-form-label">Number of Guests</label>
+                            <div class="col-md-9" id="radio">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">2</label>
+                                </div> 
+                                <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                        <label class="form-check-label" for="inlineRadio3">3</label>
+                                </div> 
+                                <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                                        <label class="form-check-label" for="inlineRadio4">4</label>
+                                </div> 
+                                <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                                        <label class="form-check-label" for="inlineRadio5">5</label>
+                                </div> 
+                                <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                                        <label class="form-check-label" for="inlineRadio6">6</label>
+                                </div>                      
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Section</label>
+                            <div class="col-md-9">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                        <input type="radio" name="option" id="option1" checked>Non-Smoking
+                                    </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="options" id="option2">Smoking
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                                <label for="date" class="col-md-3 col-form-label">Date and Time</label>
+                                <div class="col-md-4">
+                                    <input type="date" class="form-control" id="date" name="date" placeholder="Date">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="time" class="form-control" id="date" name="date" placeholder="Time">
+                                </div>
+                        </div>
+                        <div class="form-group row">
+                                <div class="col-12 col-md-9 offset-md-3">
+                                    <button type="button" class="btn btn-secondary btn-lg ml-auto" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-lg btn-primary">Reserve</button>
+                                </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+<!-- J U M B O T R O N --------->
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-12 col-sm-7">
+                    <h1>Ristorante con Fusion</h1>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                </div>
+                <div class="col-12 col-sm-3 align-self-center">
+                	<img src="img/logo.png" class="img-fluid">
+                	<!-- img-fluid class makes the img responsive -->
+                </div>
+                <div class="col-12 col-sm-2 align-items-center">
+                	<div class="btn-group" role="group">
+                    <!--FOR TOOLTIP-->
+                		<!--<a role="button" class="btn btn-lg btn-block btn-warning" data-toggle="tooltip"data-html="true"title="Or Call us at<br><strong>12345678</strong" data-placement="bottom" href="#reserve"><!--This is tooltip component-->
+                		<!-- Data-toggle is js component for tooltip, TRUE says tooltip content can be styled using html,TITLE will hold the content of tooltip
+                			Reserve Table
+                		</a>-->
+                    <!--FOR MODAL-->
+                        <a role="button" class="btn btn-lg btn-block btn-warning" id="res">Reserve Table</a>
+                	</div>
+                </div> 
+            </div>
+        </div>
+    </header>
+<!------------C A R O U S A L------------->
+    <div class="container">
+    	<div class="row row-content">
+            <div class="col">
+           		<div id="mycarousel" class="carousel slide" data-ride="carousel">
+           			<div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid" src="img/uthappizza.png" alt="Uthappizza">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-default">$4.99</span></h2>
+                                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>         
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                        	<img class="d-block img-fluid" src="img/buffet.png" alt="buffet">
+                        	<div class="carousel-caption d-none d-md-block">
+                        		<h2 class="mt-0">Weekend Grand Buffet<span class="badge badge-danger">NEW</span></h2>
+					            <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                        	</div>
+                        </div>
+                        <div class="carousel-item">
+                    		<img class="d-block img-fluid" src="img/alberto.png" alt="alberto">
+                    		<div class="carousel-caption d-none d-md-block">
+                    			<h2>Alberto Somayya</h2>
+		                		<h4>Executive Chef</h4>
+		                		<p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                    		</div>
+                        </div>
+                    </div>
+                    <!--This is for the three dashes-->
+                    <ol class="carousel-indicators">
+                        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li>
+                    </ol>
+                    <!--This is for the left and right bar-->
+                    <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                    <!--Adding start and stop buttons--->
+                    <button class="btn btn-danger btn-sm" id="carousalButton">
+                    	 <span class="fa fa-pause"></span>
+                    </button>
+            	</div>
+            </div>
+       </div>
+         
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 order-sm-last col-md-3">
+                <h3>Our Lipsmacking Culinary Creations</h3>
+            </div>
+            <div class="col col-sm order-sm-first col-md">
+            <!-- PUTTING IMAGE IN A BOX -->
+            	<div class="media"><!--This div media class for adding img-->
+            		<img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png">
+            		<!-- d-flex is for sizing, mr-3 is margin right 3 -->
+            		<!-- img-thumbnail provides borders and bg to images -->
+            		<div class="media-body">
+		                <h2 class="mt-0 ">Uthappizza
+			                	<!-- USING BADGES -->
+			                <span class="badge badge-danger">HOT</span>
+			                <span class="badge badge-pill badge-secondary">Rs.300</span>
+		                </h2><!--badge-pill creates a rounded rectangle-->
+		                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+		            </div> 
+	            </div>
+            </div>
+        </div>
+
+
+        <div class="row row-content align-items-center">
+        <!-- align-items-center is vertical aligning of items inside the div box -->
+            <div class="col-12 col-sm-4 col-md-3">
+                <h3>This Month's Promotions</h3>
+            </div>
+            <div class="col col-sm col-md">
+            	<div class="media">
+            		<div class="media-body">
+		                <h2 class="mt-0">
+		                Weekend Grand Buffet
+		                <span class="badge badge-danger">NEW</span>
+		            	</h2>
+		                <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+		            </div>
+		            <img class="d-flex ml-3 img-thumbnail align-self-center" src="img/buffet.png">
+		        </div>
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 order-sm-last col-md-3">
+                <h3>Meet our Culinary Specialists</h3>
+            </div>
+            <div class="col col-sm order-sm-first col-md">
+            	<div class="media">
+            		<img class="d-flex mr-3 img-thumbnail align-self-center" src="img/alberto.png">
+            		<div class="media-body">
+		                <h2>Alberto Somayya</h2>
+		                <h4>Executive Chef</h4>
+		                <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+		            </div>
+		        </div>
+            </div>
+        </div>
+    </div>
+<footer class="footer">
+        <div class="container">
+            <div class="row">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+		              121, Clear Water Bay Road<br>
+		              Clear Water Bay, Kowloon<br>
+		              HONG KONG<br>
+                      <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
+                      <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
+                      <i class="fa fa-envelope fa-lg"></i>: 
+                      <a href="mailto:confusion@food.net">confusion@food.net</a>
+		           </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center"><!--Align-self-center is for vertical centering-->
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+           </div>
+           <div class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>© Copyright 2018 Ristorante Con Fusion</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Since bootstrap.min.js is dependent on jQuery and popper, it's mentioned at the last --> 
+
+    <!-- JS CODE FOR TOOLTIP -->
+    <!-- <script>
+    	//Basic syntax is $(address).typeofinvoke(click,ready etc)(function(){........});
+    	$(document).ready(function(){//This specifies when html doc is ready for rendering, use this code
+    		$('[data-toggle="tooltip"]').tooltip();//This code uses jquery library 
+    	//This says where ever there is a data-toggle attribute, put tooltip innit 
+    	});
+    </script>-->
+    <!--JS code written in jQuery syntax for play/pause in carousal-->
+    <script>
+        $(document).ready(function(){
+            $("#mycarousel").carousel( { interval: 2000 } );
+            $("#carouselButton").click(function(){
+                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
+                    $("#mycarousel").carousel('pause');
+                    $("#carouselButton").children("span").removeClass('fa-pause');
+                    $("#carouselButton").children("span").addClass('fa-play');
+                }
+                else if ($("#carouselButton").children("span").hasClass('fa-play')){
+                    $("#mycarousel").carousel('cycle');
+                    $("#carouselButton").children("span").removeClass('fa-play');
+                    $("#carouselButton").children("span").addClass('fa-pause');                    
+                }
+            });
+        });
+        $(document).ready(function(){
+            $(".navbar-text").click(function(){
+                $("#loginModal").modal('show')
+            });
+        });
+        $(document).ready(function(){
+            $("#res").click(function(){
+                $("#modalReserve").modal('show')
+            });
+        });
+
+    </script> 
+
+</body>
+
+</html>
